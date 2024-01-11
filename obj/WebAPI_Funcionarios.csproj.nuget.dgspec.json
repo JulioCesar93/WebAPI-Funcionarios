@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\WebAPI-C#\\WebAPI_Funcionarios\\WebAPI_Funcionarios\\WebAPI_Funcionarios.csproj": {}
+    "C:\\Workspace\\WebAPI-C#\\WebAPI_Funcionarios\\WebAPI_Funcionarios.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\WebAPI-C#\\WebAPI_Funcionarios\\WebAPI_Funcionarios\\WebAPI_Funcionarios.csproj": {
+    "C:\\Workspace\\WebAPI-C#\\WebAPI_Funcionarios\\WebAPI_Funcionarios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\WebAPI-C#\\WebAPI_Funcionarios\\WebAPI_Funcionarios\\WebAPI_Funcionarios.csproj",
+        "projectUniqueName": "C:\\Workspace\\WebAPI-C#\\WebAPI_Funcionarios\\WebAPI_Funcionarios.csproj",
         "projectName": "WebAPI_Funcionarios",
-        "projectPath": "C:\\Workspace\\WebAPI-C#\\WebAPI_Funcionarios\\WebAPI_Funcionarios\\WebAPI_Funcionarios.csproj",
+        "projectPath": "C:\\Workspace\\WebAPI-C#\\WebAPI_Funcionarios\\WebAPI_Funcionarios.csproj",
         "packagesPath": "C:\\Users\\julio\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\WebAPI-C#\\WebAPI_Funcionarios\\WebAPI_Funcionarios\\obj\\",
+        "outputPath": "C:\\Workspace\\WebAPI-C#\\WebAPI_Funcionarios\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\julio\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

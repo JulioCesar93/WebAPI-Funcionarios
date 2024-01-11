@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WldZ987nVPxg0MqyXwRABHJODJB01Ff2NmCCA7w9TPknC8z9SkX0bdlmgZtWdT0+kQy3PipLOpgYUulwKouObA==",
+  "dgSpecHash": "xVM7KCrV6w8OXMZ+OdpFZT6rSW2on5g+CWG3JKDOKJD12aaeA5JMiSeCTmWBU3xfPnjU56oOlO06k6E3Jm3wbg==",
   "success": true,
-  "projectFilePath": "C:\\Workspace\\WebAPI-C#\\WebAPI_Funcionarios\\WebAPI_Funcionarios\\WebAPI_Funcionarios.csproj",
+  "projectFilePath": "C:\\Workspace\\WebAPI-C#\\WebAPI_Funcionarios\\WebAPI_Funcionarios.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\julio\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\julio\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -1,8 +1,15 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using WebAPI_Funcionarios.Models;
 
-public class Class1
+namespace WebAPI_Funcionarios.DataContext
 {
-	public Class1()
-	{
-	}
+    public class ApplicationDbContext : DbContext
+    {
+
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {
+        }
+
+        public DbSet<FuncionarioModel> Funcionarios { get; set; }
+        }
 }
