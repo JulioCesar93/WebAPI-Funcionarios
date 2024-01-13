@@ -6,7 +6,7 @@ namespace WebAPI_Funcionarios.Models
     public class FuncionarioModel
     {
         [Key]
-        public int Id { get; set; }
+        public int Id { get; set; } //Matrícula
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public DepartamentoEnum Departamento { get; set; }

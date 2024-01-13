@@ -13,7 +13,7 @@ namespace WebAPI_Funcionarios.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20240111014103_first-migration")]
-    partial class firstmigration
+    partial class FirstMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

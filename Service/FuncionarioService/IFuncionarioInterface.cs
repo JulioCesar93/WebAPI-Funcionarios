@@ -1,0 +1,15 @@
+﻿using WebAPI_Funcionarios.Models;
+
+namespace WebAPI_Funcionarios.Service.FuncionarioService
+{
+    public interface IFuncionarioInterface
+    {
+        Task<ServiceResponse<List<FuncionarioModel>>> GetFuncionarios(); //Método busca lista funcionários
+        Task<ServiceResponse<List<FuncionarioModel>>> CreateFuncionarios(FuncionarioModel novoFuncionario);
+        Task<ServiceResponse<List<FuncionarioModel>>> GetFuncionarioById (int id);
+        Task<ServiceResponse<List<FuncionarioModel>>> UpdateFuncionario (FuncionarioModel editadoFuncionario);
+        Task<ServiceResponse<List<FuncionarioModel>>> DeleteFuncionario (int id);
+        Task<ServiceResponse<List<FuncionarioModel>>> InativaFuncionario (int id);
+
+    }
+}
