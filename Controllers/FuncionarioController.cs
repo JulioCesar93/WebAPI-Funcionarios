@@ -7,7 +7,6 @@ namespace WebAPI_Funcionarios.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-
     public class FuncionarioController : ControllerBase
     {
         private readonly IFuncionarioInterface _funcionarioInterface;
@@ -22,7 +21,7 @@ namespace WebAPI_Funcionarios.Controllers
             return Ok(await _funcionarioInterface.GetFuncionarios());
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public async Task<ActionResult<ServiceResponse<FuncionarioModel>>> GetFuncionarioById(int id)
         {
             ServiceResponse<FuncionarioModel> serviceResponse = await _funcionarioInterface.GetFuncionarioById(id);
@@ -35,5 +34,7 @@ namespace WebAPI_Funcionarios.Controllers
         {
             return Ok(await _funcionarioInterface.CreateFuncionario(novoFuncionario));
         }
+
+
     }
 }
