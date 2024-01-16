@@ -1,4 +1,5 @@
-﻿using WebAPI_Funcionarios.DataContext;
+﻿using System.Linq.Expressions;
+using WebAPI_Funcionarios.DataContext;
 using WebAPI_Funcionarios.Models;
 
 namespace WebAPI_Funcionarios.Service.FuncionarioService
@@ -11,9 +12,35 @@ namespace WebAPI_Funcionarios.Service.FuncionarioService
             _context = context;
         }
 
-        public Task<ServiceResponse<List<FuncionarioModel>>> CreateFuncionarios(FuncionarioModel novoFuncionario)
+        public async Task<ServiceResponse<List<FuncionarioModel>>> CreateFuncionarios(FuncionarioModel novoFuncionario)
         {
-            throw new NotImplementedException();
+            ServiceResponse<List<FuncionarioModel>> serviceResponse = new ServiceResponse<List<FuncionarioModel>>();
+
+            try
+            {
+                if (novoFuncionario == null)
+                {
+                    serviceResponse.Dados = null;
+                    serviceResponse.Mensagem = "Informar dados!";
+                    serviceResponse.Sucesso = false;
+
+                    return serviceResponse;
+                }
+
+                _context.Add(novoFuncionario);
+                await _context.SaveChangesAsync();
+
+                serviceResponse.Dados = _context.Funcionarios.ToList();
+
+
+            }
+            catch (Exception ex)
+            {
+                serviceResponse.Mensagem = ex.Message;
+                serviceResponse.Sucesso = false;
+            }
+
+            return serviceResponse;
         }
 
         public Task<ServiceResponse<List<FuncionarioModel>>> DeleteFuncionario(int id)
@@ -24,11 +51,11 @@ namespace WebAPI_Funcionarios.Service.FuncionarioService
         public Task<ServiceResponse<List<FuncionarioModel>>> GetFuncionarioById(int id)
         {
             throw new NotImplementedException();
-        }
+        }//Buscar por ID / Matrícula
 
         public async Task <ServiceResponse<List<FuncionarioModel>>> GetFuncionarios()
         {
-            ServiceResponse<FuncionarioModel> serviceResponse = new ServiceResponse<FuncionarioModel>();
+            ServiceResponse<List<FuncionarioModel>> serviceResponse = new ServiceResponse<List<FuncionarioModel>>();
 
             try
             {
@@ -36,7 +63,7 @@ namespace WebAPI_Funcionarios.Service.FuncionarioService
                 
                 if(serviceResponse.Dados.Count == 0)
                 {
-                    serviceResponse.Mensagem = "Nenhum ID encontrado!";
+                    serviceResponse.Mensagem = "Nenhum dado encontrado!";
                 }
             }
             catch (Exception ex)

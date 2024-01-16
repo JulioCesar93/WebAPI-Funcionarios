@@ -1,6 +1,6 @@
 ﻿namespace WebAPI_Funcionarios.Models
 {
-    public class ServerResponse<T>
+    public class ServiceResponse<T>
     {
         public T? Dados { get; set; }
         public string Mensagem { get; set; } = string.Empty;
