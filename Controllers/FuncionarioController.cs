@@ -44,5 +44,24 @@ namespace WebAPI_Funcionarios.Controllers
 
         }
 
+        [HttpDelete] // Deleta funcionário
+        public async Task<ActionResult<ServiceResponse<List<FuncionarioModel>>>> DeleteFuncionario(int id)
+        {
+            ServiceResponse<List<FuncionarioModel>> serviceResponse = await _funcionarioInterface.DeleteFuncionario(id);
+
+            return Ok(serviceResponse);
+
+        }
+
+        [HttpPut] // Atualiza todos os dados
+        public async Task<ActionResult<ServiceResponse<List<FuncionarioModel>>>> UpdateFuncionario(FuncionarioModel editadoFuncionario)
+        {
+            ServiceResponse<List<FuncionarioModel>> serviceResponse = await _funcionarioInterface.UpdateFuncionario(editadoFuncionario);
+
+            return Ok(serviceResponse);
+        }
+
+
     }
 }
+
